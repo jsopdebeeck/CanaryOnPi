@@ -1,0 +1,15 @@
+[Unit]
+Description=OpenCanary honeypot
+After=syslog.target
+After=network.target
+
+[Service]
+User=root
+Restart=always
+Environment=VIRTUAL_ENV=/home/pi/canary-env/
+Environment=PATH=$VIRTUAL_ENV/bin:/usr/bin:$PATH
+WorkingDirectory=/home/pi/opencanary
+ExecStart=/home/pi/opencanary/bin/opencanaryd --dev
+
+[Install]
+WantedBy=multi-user.target

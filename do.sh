@@ -1,4 +1,5 @@
 # This is a list of commands, not an automatic script to launch 
+# Better to copy / paste and follow the instructions
 
 
 # Basic stuffs
